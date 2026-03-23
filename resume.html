@@ -322,7 +322,8 @@ body.resume-page a.toolbar-back:hover {
     viewer.style.removeProperty('display');
   }
 
-  fetch('resume.docx')
+  var resumeDocxUrl = 'resume.docx?v=' + Date.now();
+  fetch(resumeDocxUrl, { cache: 'no-store' })
     .then(function (res) {
       if (!res.ok) throw new Error('missing');
       return res.blob();
