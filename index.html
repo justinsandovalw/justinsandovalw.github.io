@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Sandoval — Cybersecurity</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Justin Sandoval</div>
+  <ul class="nav-links">
+    <li><a href="#certs">Credentials</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#writeups">Writeups</a></li>
+    <li><a href="resume.html" class="nav-cta">Resume</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Cybersecurity Analyst</div>
+    <h1>Field-tested.<br><em>Threat-aware.</em><br>Ready.</h1>
+    <p class="hero-body">
+      Nearly three years installing and troubleshooting fiber optic internet, analog and VoIP telephone, and IPTV systems at Allo Fiber — including work inside the Central Office — gave me something most entry-level candidates don't have — a real understanding of how networks behave, fail, and get exploited. Paired with the Google Cybersecurity Certificate, I'm transitioning into SOC work with both the instincts and the training to contribute from day one.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-solid">See My Work</a>
+      <a href="resume.html" class="btn btn-ghost">View Resume</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-num">3<span>yr</span></div>
+        <div class="stat-label">Field Networking</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1<span>+</span></div>
+        <div class="stat-label">Security Certs</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Google Cert Courses</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Bootcamp. All self-driven.</div>
+      </div>
+    </div>
+    <div class="location-line">Brandon, FL &nbsp;·&nbsp; Remote or Tampa Bay Area</div>
+  </div>
+</section>
+
+<!-- ══ CREDENTIALS ═══════════════════════════════════════ -->
+<section class="section" id="certs">
+  <div class="section-header reveal">
+    <span class="section-num">i.</span>
+    <h2>Credentials</h2>
+  </div>
+
+  <div class="certs-layout reveal">
+    <div class="cert-main">
+      <div class="cert-tag tag-earned">Earned</div>
+      <div class="cert-title">Google Cybersecurity<br>Certificate</div>
+      <div class="cert-org">Coursera × Google &nbsp;·&nbsp; Sept. 2023 &amp; May 2024</div>
+      <p class="cert-desc">An 8-course professional certificate completed September 2023, plus an additional Google Cybersecurity specialization completed May 2024 — two separate credentials demonstrating sustained commitment beyond the initial cert. Covers the full lifecycle of security operations: detection, investigation, response, and documentation, with hands-on work in real SOC tools.</p>
+      <div class="pill-row">
+        <span class="pill">SIEM / Splunk</span>
+        <span class="pill">Detection &amp; Response</span>
+        <span class="pill">Assets &amp; Vulnerabilities</span>
+        <span class="pill">Security Risk Mgmt</span>
+        <span class="pill">Chronicle</span>
+        <span class="pill">Wireshark</span>
+        <span class="pill">Linux CLI</span>
+        <span class="pill">Incident Response</span>
+        <span class="pill">NIST Framework</span>
+        <span class="pill">Network Analysis</span>
+        <span class="pill">Python Basics</span>
+        <span class="pill">SQL</span>
+      </div>
+    </div>
+    <div class="cert-aside">
+      <div>
+        <div class="cert-aside-label">Issuer</div>
+        <div class="cert-aside-val">Google</div>
+        <div class="cert-aside-label">Platform</div>
+        <div class="cert-aside-val">Coursera</div>
+        <div class="cert-aside-label">Status</div>
+        <div class="cert-aside-val cert-aside-val--accent">Completed ✓ (×2)</div>
+      </div>
+      <div class="cert-aside-footnote">
+        Recognized by Google and major employers as equivalent to entry-level analyst experience.
+      </div>
+    </div>
+  </div>
+
+  <div class="cert-row reveal">
+    <div class="cert-small">
+      <div class="cert-tag tag-progress">In Progress</div>
+      <div class="cert-small-title">CompTIA Security+</div>
+      <div class="cert-small-sub">Actively studying &nbsp;·&nbsp; Target: 2026</div>
+    </div>
+    <div class="cert-small">
+      <div class="cert-tag tag-exp">~3 Years</div>
+      <div class="cert-small-title">Allo Fiber</div>
+      <div class="cert-small-sub">Residential Installation Technician &nbsp;·&nbsp; Fiber · POTS / VoIP · IPTV · ONT devices · Signal diagnostics · Router config</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ═══════════════════════════════════════════ -->
+<section class="section" id="projects">
+  <div class="section-header reveal">
+    <span class="section-num">ii.</span>
+    <h2>Projects</h2>
+  </div>
+
+  <div class="projects-list reveal">
+    <div class="project-row project-row-clickable" onclick="goToWriteup('writeup-lab')">
+      <div class="project-num">1</div>
+      <div class="project-content">
+        <div class="project-name">Home Lab — TrueNAS + Containers</div>
+        <p class="project-desc">Self-hosted home lab built on TrueNAS with multiple containerized services running and maintained. Managing storage pools, datasets, network shares, and container deployments hands-on — real infrastructure experience that goes beyond any course or cert.</p>
+        <div class="project-tools">
+          <span class="tool">TrueNAS</span>
+          <span class="tool">Docker</span>
+          <span class="tool">Containers</span>
+          <span class="tool">Networking</span>
+          <span class="tool">Storage</span>
+          <span class="tool">Linux</span>
+        </div>
+      </div>
+      <div class="project-arrow">→</div>
+    </div>
+
+    <div class="project-row project-row-clickable" onclick="goToWriteup('writeup-network')">
+      <div class="project-num">2</div>
+      <div class="project-content">
+        <div class="project-name">Network Traffic Analysis with Wireshark</div>
+        <p class="project-desc">Completed Wireshark packet analysis as part of the Google Cybersecurity Certificate curriculum. Captured live traffic, established normal baselines, and identified signatures for port scanning, ARP anomalies, and unusual DNS behavior — the exact patterns a Tier 1 SOC analyst monitors.</p>
+        <div class="project-tools">
+          <span class="tool">Wireshark</span>
+          <span class="tool">TCP/IP</span>
+          <span class="tool">DNS</span>
+          <span class="tool">ARP</span>
+          <span class="tool">PCAP</span>
+          <span class="tool">nmap</span>
+        </div>
+      </div>
+      <div class="project-arrow">→</div>
+    </div>
+
+    <div class="project-row project-row-clickable" onclick="goToWriteup('writeup-cert')">
+      <div class="project-num">3</div>
+      <div class="project-content">
+        <div class="project-name">Telecom → Cyber: A Skills Mapping</div>
+        <p class="project-desc">A written case study connecting three years of fiber optic, IPTV, and ISP field work — including time inside the Central Office — to cybersecurity concepts. Documents how physical network troubleshooting maps directly to SOC triage methodology.</p>
+        <div class="project-tools">
+          <span class="tool">Case Study</span>
+          <span class="tool">Network Architecture</span>
+          <span class="tool">SOC Methodology</span>
+        </div>
+      </div>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WRITEUPS ═══════════════════════════════════════════ -->
+<section class="section" id="writeups">
+  <div class="section-header reveal">
+    <span class="section-num">iii.</span>
+    <h2>Technical Writeups</h2>
+  </div>
+
+  <div class="writeups-list reveal">
+
+    <!-- SOC LAB -->
+    <div class="writeup-item" id="writeup-lab">
+      <button class="writeup-trigger" onclick="toggleW(this)">
+        <div>
+          <div class="writeup-trigger-left">
+            <span class="wt-num">01</span>
+            <span class="wt-title">My Home Lab: TrueNAS + Containers</span>
+          </div>
+          <div class="wt-sub">TrueNAS · Docker · Containers · Networking · Linux</div>
+        </div>
+        <span class="wt-toggle">+</span>
+      </button>
+      <div class="writeup-content">
+        <h3>What I'm Running</h3>
+        <p>My home lab is built on TrueNAS as the core platform — managing storage pools, datasets, and network shares. On top of that I run containerized services that I deploy, maintain, and troubleshoot as a daily habit. This isn't a course exercise — it's a live environment I actually use.</p>
+
+        <h3>What TrueNAS Teaches You</h3>
+        <ul>
+          <li>Storage pool management — ZFS datasets, snapshots, replication</li>
+          <li>User and permission management — ACLs, dataset permissions, SMB/NFS shares</li>
+          <li>Network configuration — static IPs, VLANs, interface management</li>
+          <li>Service monitoring — watching what's running, what's failing, and why</li>
+        </ul>
+
+        <h3>Containers</h3>
+        <p>Running containerized applications means constantly managing networking between services, volume mounts, port mappings, and environment configs. When something breaks, you troubleshoot it — no instructor, no walkthrough. That problem-solving process is exactly what SOC work demands.</p>
+
+        <h3>Why This Matters for Security</h3>
+        <ul>
+          <li>You can't protect what you don't understand — I understand how these systems are built</li>
+          <li>Running real services means real attack surface — I think about exposure by default</li>
+          <li>Log reading is a daily habit — TrueNAS surfaces system logs constantly</li>
+          <li>Networking is intuitive, not theoretical — I've broken and fixed it myself</li>
+        </ul>
+
+        <h3>The Field Connection</h3>
+        <p>Three years at Allo Fiber — installing fiber internet, analog and VoIP phone, and IPTV over IP networks, including work inside the Central Office — taught me how networks are physically built from the backbone out. The home lab is where I'm building the software and security layer on top of that foundation. The combination — physical infrastructure instinct plus live systems administration — is something most entry-level candidates don't have.</p>
+      </div>
+    </div>
+
+    <!-- WIRESHARK -->
+    <div class="writeup-item" id="writeup-network">
+      <button class="writeup-trigger" onclick="toggleW(this)">
+        <div>
+          <div class="writeup-trigger-left">
+            <span class="wt-num">02</span>
+            <span class="wt-title">Network Traffic Analysis with Wireshark</span>
+          </div>
+          <div class="wt-sub">Packet capture · ARP · DNS · Port scan detection</div>
+        </div>
+        <span class="wt-toggle">+</span>
+      </button>
+      <div class="writeup-content">
+        <h3>Objective</h3>
+        <p>Capture real network traffic, document what normal looks like, then identify the signatures of three common attack patterns — port scanning, ARP poisoning, and DNS abuse.</p>
+
+        <h3>Establishing a Baseline</h3>
+        <p>Before you can detect an attack, you need to know what clean traffic looks like on your network. Key normal patterns I documented:</p>
+        <ul>
+          <li>ARP broadcasts limited to local subnet — routine "who has X.X.X.X?" queries</li>
+          <li>DNS queries going only to known resolvers, returning fast, for recognizable domains</li>
+          <li>TCP handshakes completing cleanly — SYN, SYN-ACK, ACK, data, FIN</li>
+          <li>HTTPS dominating outbound — most real traffic is encrypted TLS 1.3</li>
+        </ul>
+
+        <h3>Detecting a Port Scan</h3>
+        <p>Ran a controlled nmap scan from the Kali VM and captured it. The signature is unmistakable once you know what to look for:</p>
+        <div class="code-snip">
+<span class="c"># Wireshark display filter — isolate SYN packets (no ACK)</span>
+tcp.flags.syn == 1 and tcp.flags.ack == 0
+
+<span class="c"># What you see: one source IP, sequential destination ports,</span>
+<span class="c"># rapid SYN packets, mostly RST responses = textbook nmap</span>
+        </div>
+
+        <h3>ARP Poisoning Indicators</h3>
+        <ul>
+          <li>Unsolicited ARP replies (no prior ARP request) — classic sign of gratuitous ARP attack</li>
+          <li>Two different MAC addresses claiming ownership of the same IP</li>
+          <li>ARP reply rate far above baseline — poisoning requires sustained broadcast flooding</li>
+        </ul>
+
+        <h3>DNS Abuse Pattern</h3>
+        <ul>
+          <li>Queries for long, random-looking subdomains — typical DNS tunneling indicator</li>
+          <li>Unusually large DNS response payloads — data being smuggled in TXT records</li>
+          <li>High query volume to a single domain from one host — exfil over DNS</li>
+        </ul>
+
+        <h3>The Field Connection</h3>
+        <p>Signal tracing in fiber and IPTV work and packet analysis in security are the same mental model: you know what a healthy signal looks like, you watch for deviation, you trace it to source. The tools are different. The thinking isn't.</p>
+        <p>Working inside Allo Fiber's Central Office gave me a picture of what ISP backbone infrastructure actually looks like — the switching and routing equipment that everything else depends on. That context makes network monitoring feel concrete rather than abstract.</p>
+      </div>
+    </div>
+
+    <!-- GOOGLE CERT -->
+    <div class="writeup-item" id="writeup-cert">
+      <button class="writeup-trigger" onclick="toggleW(this)">
+        <div>
+          <div class="writeup-trigger-left">
+            <span class="wt-num">03</span>
+            <span class="wt-title">Google Cybersecurity Certificate — What I Actually Learned</span>
+          </div>
+          <div class="wt-sub">SIEM · Incident Response · Linux · Python · NIST</div>
+        </div>
+        <span class="wt-toggle">+</span>
+      </button>
+      <div class="writeup-content">
+        <h3>Why I'm Writing This</h3>
+        <p>A lot of people list this cert on a resume without explaining what it actually taught them. Here's my honest breakdown — what stuck, what I practiced, and how I connected it to real experience.</p>
+
+        <h3>Networks & Network Security</h3>
+        <p>This was the module that clicked hardest for me. TCP/IP, DNS, DHCP, routing — I'd seen all of it in the field without knowing the formal names. The cert gave me the vocabulary to talk about things I already understood physically.</p>
+        <ul>
+          <li>OSI and TCP/IP models — finally had names for layers I'd worked with</li>
+          <li>Common attacks: DoS/DDoS, MITM, packet sniffing, IP spoofing</li>
+          <li>Firewall rules, VPNs, proxy servers, network segmentation</li>
+        </ul>
+
+        <h3>SIEM — Hands-on with Splunk & Chronicle</h3>
+        <ul>
+          <li>Writing SPL (Search Processing Language) queries to find events in log data</li>
+          <li>Building dashboards to surface alert patterns over time</li>
+          <li>Google Chronicle — cloud-native SIEM, enterprise-scale log correlation</li>
+          <li>Alert triage methodology — how to prioritize and investigate without alert fatigue</li>
+        </ul>
+
+        <h3>Incident Response</h3>
+        <ul>
+          <li>NIST IR lifecycle — Prepare, Detect, Contain, Eradicate, Recover, Post-Incident</li>
+          <li>Writing and following playbooks for specific incident types</li>
+          <li>Documenting IOCs, affected assets, timelines — the part that actually matters in a real SOC</li>
+        </ul>
+
+        <h3>Linux & Python</h3>
+        <ul>
+          <li>CLI navigation, file permissions, user management, bash scripting basics</li>
+          <li>Python for automating repetitive security tasks — log parsing, file searching</li>
+          <li>SQL queries for pulling records from log databases</li>
+        </ul>
+
+        <h3>My Honest Assessment</h3>
+        <p>The cert is real preparation, not a participation trophy. It gave me frameworks, vocabulary, and hands-on practice. What it can't give you is the feel for how physical networks are built — that part came from three years in the field, and I think the combination is genuinely stronger than either alone.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-name">Justin Sandoval</div>
+  <ul class="footer-links">
+    <li><a href="mailto:your@email.com">justin.sandovalw@gmail.com</a></li>
+    <li><a href="https://www.linkedin.com/in/justin-sandovalw" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="#">Brandon, FL</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggleW(btn) {
+  const item = btn.closest('.writeup-item');
+  item.classList.toggle('open');
+}
+
+function goToWriteup(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.add('open');
+  setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

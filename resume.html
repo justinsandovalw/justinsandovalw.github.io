@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume — Justin Sandoval</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  --ink: #0e0e0e;
+  --paper: #111111;
+  --rule: #2a2a2a;
+  --body: #a8a8a8;
+  --head: #f0ece4;
+  --amber: #c8a96e;
+  --amber2: #e8c98e;
+  --sheet: #f9f7f4;
+  --sheet-ink: #1a1a1a;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+html { font-size: 16px; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--body);
+  min-height: 100vh;
+  background: var(--paper);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(200, 169, 110, 0.06), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(42, 42, 42, 0.35), transparent 50%);
+  -webkit-font-smoothing: antialiased;
+}
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  min-height: 64px;
+  padding: 0 2rem;
+  background: rgba(17, 17, 17, 0.94);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: blur(10px);
+}
+.toolbar-left { justify-self: start; min-width: 9rem; }
+.toolbar-mid {
+  justify-self: center;
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.toolbar-right {
+  justify-self: end;
+  min-width: 9rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.toolbar-download {
+  display: inline-block;
+  color: var(--ink);
+  background: var(--amber);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 2px;
+  border: 1px solid var(--amber);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.toolbar-download:hover {
+  background: var(--amber2);
+  border-color: var(--amber2);
+  color: var(--ink);
+}
+body.resume-page a.toolbar-download {
+  color: var(--ink) !important;
+  text-decoration: none !important;
+}
+body.resume-page a.toolbar-download:hover {
+  color: var(--ink) !important;
+}
+.toolbar-back {
+  color: var(--amber);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border: 1px solid var(--amber);
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+.toolbar-back:hover {
+  background: var(--amber);
+  color: var(--ink);
+}
+/* If any global docx rules ever hit the light DOM again, keep chrome readable */
+body.resume-page a.toolbar-back {
+  color: var(--amber) !important;
+  text-decoration: none !important;
+}
+body.resume-page a.toolbar-back:hover {
+  color: var(--ink) !important;
+}
+.toolbar-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--head);
+  letter-spacing: 0.02em;
+}
+.toolbar-hint {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+  opacity: 0.75;
+}
+#viewer {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+#doc-host {
+  background: transparent;
+  color: var(--sheet-ink);
+  border-radius: 3px;
+  min-height: 120px;
+  padding: 0;
+  overflow-x: auto;
+}
+.loading {
+  padding: 2.5rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+/* Shown only when JS clones #resume-error-tmpl (avoids Word/docx injected CSS un-hiding a pre-rendered panel) */
+.resume-error-panel {
+  max-width: 560px;
+  margin: 2rem auto;
+  padding: 2rem 2.25rem;
+  background: #191919;
+  border: 1px solid #2a2a2a;
+  border-radius: 3px;
+  line-height: 1.75;
+  font-size: 0.9rem;
+}
+.resume-error-panel h2 {
+  color: #f0ece4;
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.resume-error-panel ul { margin: 0.75rem 0 0; padding-left: 1.25rem; }
+.resume-error-panel li { margin-bottom: 0.75rem; }
+.resume-error-panel a { color: #c8a96e; }
+.resume-error-panel code {
+  display: inline-block;
+  margin-top: 0.35rem;
+  background: #0e0e0e;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.82rem;
+  border-radius: 2px;
+  color: #ccc;
+}
+</style>
+</head>
+<body class="resume-page">
+<div class="toolbar">
+  <div class="toolbar-left">
+    <a class="toolbar-back" href="index.html">← Portfolio</a>
+  </div>
+  <div class="toolbar-mid">
+    <span class="toolbar-title">Resume</span>
+    <span class="toolbar-hint">Preview</span>
+  </div>
+  <div class="toolbar-right">
+    <a class="toolbar-download" href="resume.docx" download="Justin-Sandoval-Resume.docx">Download .docx</a>
+  </div>
+</div>
+<div id="viewer">
+  <div id="doc-host"><div class="loading" id="loading">Loading resume…</div></div>
+</div>
+
+<template id="resume-error-tmpl">
+  <div class="resume-error-panel" role="alert" aria-live="polite">
+    <h2>Preview couldn’t load</h2>
+    <p>Most browsers won’t load <code>resume.docx</code> from a file you opened by double‑clicking (security). Use one of these:</p>
+    <ul>
+      <li><strong>Local server:</strong> in this folder run <code>python -m http.server 8080</code>, then open <code>http://localhost:8080/resume.html</code></li>
+      <li><strong>Word:</strong> open <a href="resume.docx" target="_blank" rel="noopener noreferrer">resume.docx</a> directly</li>
+      <li><strong>Exact PDF copy:</strong> in Word use <em>File → Save As → PDF</em> as <code>resume.pdf</code>, then we can link straight to that file in the portfolio instead</li>
+    </ul>
+  </div>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx-preview@0.3.5/dist/docx-preview.js"></script>
+<script>
+(function () {
+  var host = document.getElementById('doc-host');
+  var loading = document.getElementById('loading');
+  var viewer = document.getElementById('viewer');
+  var tmpl = document.getElementById('resume-error-tmpl');
+
+  function injectDocxChromeOverrides(shadow) {
+    if (!shadow || shadow.querySelector('#resume-docx-chrome')) return;
+    var s = document.createElement('style');
+    s.id = 'resume-docx-chrome';
+    s.textContent = [
+      '.docx-preview-wrapper {',
+      '  background: transparent !important;',
+      '  padding: 0 !important;',
+      '  margin: 0 !important;',
+      '  display: block !important;',
+      '}',
+      '.docx-preview-wrapper > section.docx-preview {',
+      '  background: #f9f7f4 !important;',
+      '  color: #1a1a1a !important;',
+      '  font-family: "DM Sans", "Segoe UI", sans-serif !important;',
+      '  font-weight: 400 !important;',
+      '  font-size: 11pt !important;',
+      '  line-height: 1.62 !important;',
+      '  padding: 3rem 3.25rem !important;',
+      '  margin: 0 auto !important;',
+      '  max-width: 8.5in !important;',
+      '  box-sizing: border-box !important;',
+      '  box-shadow: 0 20px 60px rgba(0,0,0,0.38), 0 0 0 1px rgba(0,0,0,0.05) !important;',
+      '  border-radius: 3px !important;',
+      '  margin-bottom: 2rem !important;',
+      '}',
+      '@media print {',
+      '  .docx-preview-wrapper > section.docx-preview { box-shadow: none !important; }',
+      '}',
+      'section.docx-preview p,',
+      'section.docx-preview li,',
+      'section.docx-preview td,',
+      'section.docx-preview th {',
+      '  font-family: "DM Sans", "Segoe UI", sans-serif !important;',
+      '  font-size: 11pt !important;',
+      '  line-height: 1.62 !important;',
+      '}',
+      'section.docx-preview p { margin: 0 0 0.55em !important; }',
+      'section.docx-preview p:empty { margin: 0 !important; height: 0.65em !important; }',
+      'section.docx-preview table {',
+      '  margin: 0.85em 0 1.1em !important;',
+      '  border-collapse: collapse !important;',
+      '  width: 100% !important;',
+      '}',
+      'section.docx-preview td,',
+      'section.docx-preview th {',
+      '  padding: 0.4em 0.65em !important;',
+      '  vertical-align: top !important;',
+      '}',
+      'section.docx-preview ul,',
+      'section.docx-preview ol {',
+      '  margin: 0.35em 0 0.85em !important;',
+      '  padding-left: 1.35em !important;',
+      '}',
+      'section.docx-preview li { margin: 0 0 0.35em !important; }',
+      'section.docx-preview hr {',
+      '  margin: 1.15em 0 !important;',
+      '  border: none !important;',
+      '  border-top: 1px solid #c8c4bc !important;',
+      '}',
+      'section.docx-preview [class*="_heading"],',
+      'section.docx-preview [class*="heading"] {',
+      '  font-family: "DM Serif Display", Georgia, serif !important;',
+      '  letter-spacing: 0.02em !important;',
+      '}',
+    ].join('\n');
+    shadow.appendChild(s);
+  }
+
+  function docxWrapperPresent() {
+    var sr = host.shadowRoot;
+    return !!(sr && sr.querySelector('.docx-preview-wrapper'));
+  }
+
+  function showErrorPanel() {
+    if (loading) loading.remove();
+    if (document.querySelector('.resume-error-panel')) return;
+    viewer.style.setProperty('display', 'none', 'important');
+    document.body.appendChild(tmpl.content.cloneNode(true));
+  }
+
+  function clearViewerHide() {
+    viewer.style.removeProperty('display');
+  }
+
+  fetch('resume.docx')
+    .then(function (res) {
+      if (!res.ok) throw new Error('missing');
+      return res.blob();
+    })
+    .then(function (blob) {
+      if (loading) {
+        loading.remove();
+        loading = null;
+      }
+      var legacy = document.getElementById('resume-docx-chrome');
+      if (legacy) legacy.remove();
+
+      var shadow = host.shadowRoot || host.attachShadow({ mode: 'open' });
+      var styleSink = document.createElement('div');
+      styleSink.className = 'docx-style-sink';
+      styleSink.setAttribute('aria-hidden', 'true');
+      var mount = document.createElement('div');
+      mount.className = 'docx-mount';
+      shadow.appendChild(styleSink);
+      shadow.appendChild(mount);
+
+      return docx.renderAsync(blob, mount, styleSink, {
+        className: 'docx-preview',
+        inWrapper: true,
+        breakPages: true,
+        renderHeaders: true,
+        renderFooters: true,
+        ignoreWidth: false,
+        ignoreHeight: false
+      });
+    })
+    .then(function () {
+      injectDocxChromeOverrides(host.shadowRoot);
+      clearViewerHide();
+    })
+    .catch(function (err) {
+      console.error(err);
+      if (docxWrapperPresent()) {
+        injectDocxChromeOverrides(host.shadowRoot);
+        clearViewerHide();
+        return;
+      }
+      showErrorPanel();
+    });
+})();
+</script>
+</body>
+</html>
