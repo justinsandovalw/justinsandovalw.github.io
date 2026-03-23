@@ -62,6 +62,10 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+.toolbar-download-group {
+  display: inline-flex;
+  gap: 0.5rem;
+}
 .toolbar-download {
   display: inline-block;
   color: var(--ink);
@@ -81,11 +85,27 @@ body {
   border-color: var(--amber2);
   color: var(--ink);
 }
+.toolbar-download.secondary {
+  color: var(--amber);
+  background: transparent;
+  border-color: var(--amber);
+}
+.toolbar-download.secondary:hover {
+  color: var(--ink);
+  background: var(--amber);
+  border-color: var(--amber);
+}
 body.resume-page a.toolbar-download {
   color: var(--ink) !important;
   text-decoration: none !important;
 }
 body.resume-page a.toolbar-download:hover {
+  color: var(--ink) !important;
+}
+body.resume-page a.toolbar-download.secondary {
+  color: var(--amber) !important;
+}
+body.resume-page a.toolbar-download.secondary:hover {
   color: var(--ink) !important;
 }
 .toolbar-back {
@@ -186,7 +206,10 @@ body.resume-page a.toolbar-back:hover {
     <span class="toolbar-hint">Preview</span>
   </div>
   <div class="toolbar-right">
-    <a class="toolbar-download" href="resume.docx" download="Justin-Sandoval-Resume.docx">Download .docx</a>
+    <div class="toolbar-download-group">
+      <a class="toolbar-download" href="resume.pdf" download="Justin-Sandoval-Resume.pdf">Download PDF</a>
+      <a class="toolbar-download secondary" href="resume.docx" download="Justin-Sandoval-Resume.docx">Download DOCX</a>
+    </div>
   </div>
 </div>
 <div id="viewer">
